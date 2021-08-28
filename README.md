@@ -12,17 +12,17 @@ The web page simply takes in an URL and use "Meaning Sentiment Analysis" to eval
 
 # Other available scripts
 
-## Live express server (nodemon)
+### Live express server (nodemon)
 
 nodemon runs a live server that watch changes and restart the server when files change, which ends the need to restart the server after each change in code.<br>
 You can run the nodemon server using the command `npm run server`.
 
-## Live webpack server
+### Live webpack server
 
 Uses webpack-dev-server to make webpack watch changes in the files, the script also uses the --config webpack.dev.js flag to make the build more suitable for developing.<br>
 You can run the webpack server using the command `npm run build-dev`
 
-## Testing with Jest
+### Testing with Jest
 
 Testing was done using Jest framework, adding additional tests if needed would be added inside `__test__` folder.
 To start testing use `npm test` command.
