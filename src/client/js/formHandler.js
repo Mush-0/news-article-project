@@ -5,8 +5,7 @@ function handleSubmit(e) {
   const outputDiv = document.getElementById("results");
 
   const url = { url: formText };
-  outputDiv.innerHTML = `<p class="loading" >Please wait,Loading...</p>`;
-  console.log("::: Form Submitted :::", url.url);
+  outputDiv.innerHTML = `<p class="loading">Please wait,Loading...</p>`;
 
   fetch("http://localhost:8080/validate", {
     method: "POST", // *GET, POST, PUT, DELETE, etc.
