@@ -16,8 +16,10 @@ function handleSubmit(e) {
   })
     .then((res) => res.json())
     .then(function (res) {
-      if (res === "failed") {
-        document.getElementById("results").innerHTML = "Request failed";
+      if (res.error === "failed") {
+        document.getElementById("results").innerHTML =
+          "Request failed, Please enter a valid URL";
+        return;
       }
       const { score_tag, agreement, subjectivity, confidence, irony } = res;
       let scoreResult;
