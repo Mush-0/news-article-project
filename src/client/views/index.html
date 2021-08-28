@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Test</title>
+    <title>Evaluate News article</title>
   </head>
 
   <body>
@@ -10,26 +10,17 @@
       <div class="">Logo</div>
       <div class="">navigation</div>
     </header>
-    <script defer>
-      console.log("what is a client? ", Client);
-    </script>
+
     <main>
       <section>
         <form class="" onsubmit="return Client.handleSubmit(event)">
           <input
             id="name"
-            type="text"
-            name="input"
-            value=""
-            placeholder="Name"
+            type="url"
+            placeholder="URL of news article"
+            required
           />
-          <input
-            type="submit"
-            name=""
-            value="submit"
-            onclick="return Client.handleSubmit(event)"
-            onsubmit="return Client.handleSubmit(event)"
-          />
+          <input type="submit" name="" value="submit" />
         </form>
       </section>
 

@@ -4,11 +4,9 @@ require("dotenv").config();
 const mockAPIResponse = require("./mockAPI");
 var cors = require("cors");
 
-// console.log(process.env.API_key);
-
 var app = express();
 
-app.use(cors());
+app.use(cors(), express.json());
 
 console.log(path.join(__dirname, "../client"));
 app.use("/static", express.static(path.join(__dirname, "../client")));
@@ -23,6 +21,11 @@ app.listen(8080, function () {
   console.log("Example app listening http://127.0.0.1:8080/");
 });
 
-app.get("/test", function (req, res) {
+app.post("/validate", function (req, res) {
+  // const key=process.env.API_key
+
+  const url = req.body.url;
+  
+  console.log(url);
   res.send(mockAPIResponse);
 });

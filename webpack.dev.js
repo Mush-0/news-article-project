@@ -26,12 +26,17 @@ module.exports = {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/client/views/index.html",
       filename: "./index.html",
+      favicon: "./src/client/imgs/news-icon.png",
     }),
     new CleanWebpackPlugin({
       // Simulate the removal of files
