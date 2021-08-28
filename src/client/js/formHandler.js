@@ -17,8 +17,9 @@ function handleSubmit(e) {
     .then((res) => res.json())
     .then(function (res) {
       if (res.error === "failed") {
-        document.getElementById("results").innerHTML =
-          "Request failed, Please enter a valid URL";
+        document.getElementById(
+          "results"
+        ).innerHTML = `<p class="error">Request failed, API responded: ${res.problem}</p>`;
         return;
       }
       const { score_tag, agreement, subjectivity, confidence, irony } = res;
