@@ -1,4 +1,4 @@
-import { checkForName } from "./js/nameChecker";
+import { resolveScoreTag } from "./js/resolveScoreTag";
 import { handleSubmit } from "./js/formHandler";
 
 import "./styles/resets.scss";
@@ -7,5 +7,4 @@ import "./styles/footer.scss";
 import "./styles/form.scss";
 import "./styles/header.scss";
 
-// export { handleSubmit, checkForName };
-export { handleSubmit };
+export { handleSubmit, resolveScoreTag };
