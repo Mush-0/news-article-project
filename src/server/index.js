@@ -8,13 +8,13 @@ var app = express();
 
 app.use(cors(), express.json());
 
-console.log(path.join(__dirname, "../client"));
-app.use("/static", express.static(path.join(__dirname, "../client")));
+console.log(path.join(__dirname, "../../dist"));
+app.use("/", express.static(path.join(__dirname, "../../dist")));
 
-app.get("/", function (req, res) {
-  // res.sendFile('dist/index.html')
-  res.sendFile(path.resolve("src/client/views/index.html"));
-});
+// app.get("/", function (req, res) {
+//   // res.sendFile('dist/index.html')
+//   res.sendFile(path.join(__dirname, "../../dist/index.html"));
+// });
 
 // designates what port the app will listen to for incoming requests
 app.listen(8080, function () {
@@ -25,7 +25,8 @@ app.post("/validate", function (req, res) {
   // const key=process.env.API_key
 
   const url = req.body.url;
-  
-  console.log(url);
+
   res.send(mockAPIResponse);
+  
+  // res.send("failed");
 });
