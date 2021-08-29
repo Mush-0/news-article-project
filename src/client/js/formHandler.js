@@ -1,9 +1,14 @@
+import { testURL } from "./testURL";
+
 function handleSubmit(e) {
   e.preventDefault();
 
   const formText = document.getElementById("name").value;
   const outputDiv = document.getElementById("results");
-
+  if (!testURL(formText)) {
+    outputDiv.innerHTML = `<p class="error">Please enter a valid URL in the form http(s)://site-name.domain-name(/../../)</p>`;
+    return;
+  }
   const url = { url: formText };
   outputDiv.innerHTML = `<p class="loading">Please wait,Loading...</p>`;
 

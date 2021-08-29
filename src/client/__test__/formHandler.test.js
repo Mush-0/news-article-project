@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  */
 import { handleSubmit } from "../js/formHandler";
+
 // Need Polyfill for fetch
 import "whatwg-fetch";
 
@@ -22,6 +23,6 @@ test("Add loading msg to results div", () => {
   form.submit();
 
   expect(outputDiv.innerHTML).toBe(
-    `<p class="loading">Please wait,Loading...</p>`
+    `<p class="error">Please enter a valid URL in the form http(s)://site-name.domain-name(/../../)</p>`
   );
 });
